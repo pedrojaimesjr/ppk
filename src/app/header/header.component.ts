@@ -12,4 +12,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  sigla = "DEVProg";
+  signif = "Devengers Program os Heroes";
 }
