@@ -1,0 +1,23 @@
+<ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let gestor of gestors" [class.selected]="gestor === selectedGestor"
+        (click)="onSelect(gestor)">
+        <span class="badge">{{gestor.id}}</span> {{gestor.name}}</li>
+</ul>
+
+<div *ngIf="selectedGestor">
+
+    <table id="customers">
+        <tr>
+            <th>Gestor</th>
+            <th>Work</th>
+            <th>E-mail</th>
+            <th>Phone</th>
+        </tr>
+        <tr>
+            <td>{{selectedGestor.name | uppercase}}</td>
+            <td>{{selectedGestor.work}}</td>
+            <td>{{selectedGestor.email}}</td>
+            <td>{{selectedGestor.tel}}</td>
+        </tr>
+    </table>
+</div>
